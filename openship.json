@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openship.io/openship.schema.json",
+  "name": "searxng",
+  "port": 8080,
+  "env": {
+    "SEARXNG_BIND_ADDRESS": "0.0.0.0"
+  }
+}
