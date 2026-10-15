@@ -1,6 +1,6 @@
 services:
   searxng:
-    image: searxng/searxng:latest
+    build: .
     restart: unless-stopped
     ports:
       - "8080:8080"
@@ -14,9 +14,6 @@ services:
       - SEARXNG_BIND_ADDRESS=${SEARXNG_BIND_ADDRESS:-0.0.0.0}
       - SEARXNG_SECRET=${SEARXNG_SECRET:-${SERVICE_PASSWORD_SEARXNGSECRET}}
       - SEARXNG_REDIS_URL=redis://redis:6379/0
-    volumes:
-      - ./settings.yml:/etc/searxng/settings.yml:ro
-      - ./limiter.toml:/etc/searxng/limiter.toml:ro
     healthcheck:
       test:
         - CMD
