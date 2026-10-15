@@ -4,3 +4,14 @@
 [botdetection.ip_limit]
 # activate link_token method in the ip_limit method
 link_token = true
+
+[botdetection.ip_lists]
+# Whitelist private subnets so local healthchecks and OpenShip ingress probes
+# do not trigger the missing proxy header error.
+pass_ip = [
+    "127.0.0.0/8",
+    "10.0.0.0/8",
+    "172.16.0.0/12",
+    "192.168.0.0/16",
+    "::1/128"
+]
