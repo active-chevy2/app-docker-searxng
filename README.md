@@ -1,5 +1,7 @@
 # SearXNG with Redis Stack
 
+<a href="https://www.aihonestybadge.com" target="_blank" rel="noopener"><img src="https://www.aihonestybadge.com/badges/ai-assisted-large.svg" alt="AI Assisted" height="28"></a>
+
 A privacy-respecting, metasearch engine stack aggregating results from more than 70 search services without tracking or profiling users. This deployment is pre-configured with Redis for caching, enabled API endpoints (`json`, `csv`, `rss`), and bot detection settings.
 
 ---
